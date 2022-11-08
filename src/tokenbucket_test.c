@@ -93,7 +93,7 @@ void *Worker(void *arg) {
 TEST(tokenbucket, hammer) {
   long i, n = 8;
   pthread_t rp, id[n];
-  alarm(2);
+  alarm(10);
   signal(SIGALRM, OnTimeout);
   tok.b = malloc(TB_BYTES);      // allocate buckets
   memset(tok.b, 127, TB_BYTES);  // fill all buckets
